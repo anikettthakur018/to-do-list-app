@@ -1,0 +1,161 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #c850c0, #4158d0);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Container with card styling */
+  .container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.6s ease-in-out;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #4158d0;
+  }
+  
+  /* Input and button layout */
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #4158d0;
+    outline: none;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #4158d0;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #5e76e3;
+    transform: scale(1.05);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f9fc;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .task-text {
+    flex: 1;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .task-text.completed {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .actions button {
+    background-color: #e0e0e0;
+    color: #333;
+    margin-left: 5px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+  
+  .actions button:hover {
+    background-color: #ccc;
+  }
+  
+  .edit-input {
+    border: 2px solid #4158d0;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+  }
+  
+  .edit-input:focus {
+    outline: none;
+    border-color: #c850c0;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(60px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 500px) {
+    .input-group {
+      flex-direction: column;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
